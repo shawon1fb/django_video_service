@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
-<h2>{{ object }}</h2>
+<h2>Lisson Details view</h2>
+
+{% if object is not None %}
+    <h2>title: {{ object.title }}</h2>
+
+    <h2>course title :{{ object.course.title }}</h2>
+    <h2>descriptions :{{ object.course.descriptions }}</h2>
+{% else %}
+    <h3>Update member ship</h3>
+
+{% endif %}
 
 </body>
 </html>
